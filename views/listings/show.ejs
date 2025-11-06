@@ -35,7 +35,7 @@
     <hr />
     <h4>Leave a Review</h4>
     <form
-      action="/listings/<%= listing.id %>/reviews"
+      action="/listings/<%= listing.id %>/review"
       method="POST"
       novalidate
       class="needs-validation"
@@ -78,7 +78,7 @@
         </div>
         <form
           method="post"
-          action="/listing/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE"
+          action="/listing/<%= listing._id %>/review/<%= review._id %>?_method=DELETE"
           class="mb-3"
         >
           <button class="btn btn-sm btn-dark">Delete</button>
