@@ -79,6 +79,7 @@
           <div class="card-text"><%= review.comment %></div>
           <div class="card-text"><%= review.rating %> stars</div>
         </div>
+        <% if(currUser) { %>
         <form
           method="post"
           action="/listings/<%= listing._id %>/review/<%= review._id %>?_method=DELETE"
@@ -86,6 +87,7 @@
         >
           <button class="btn btn-sm btn-dark">Delete</button>
         </form>
+        <% } %>
       </div>
       <% } %>
     </div>
