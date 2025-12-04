@@ -6,15 +6,24 @@ const Listing = require("../models/listing.js");
 const { isLoggedIn, isOwner, validateListing } = require("../middleware.js");
 
 const listingController = require("../controllers/listing.js");
+const multer = require("multer");
+const { upload, cloudinary } = require("../cloudConfig.js");
 
 router
   .route("/")
   .get(wrapAsync(listingController.index))
-  .post(
-    isLoggedIn,
-    validateListing,
-    wrapAsync(listingController.createListing)
-  );
+  // .post(
+  //   isLoggedIn,
+  //   validateListing,
+  //   wrapAsync(listingController.createListing)
+  // );
+  .post(upload.single("listing[image]"), async (req, res) => {
+    console.log("FILE: ", req.file);
+
+    console.log("Cloudinary URL:", req.file.path);
+
+    res.send(req.file);
+  });
 
 //New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
