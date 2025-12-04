@@ -12,18 +12,12 @@ const { upload, cloudinary } = require("../cloudConfig.js");
 router
   .route("/")
   .get(wrapAsync(listingController.index))
-  // .post(
-  //   isLoggedIn,
-  //   validateListing,
-  //   wrapAsync(listingController.createListing)
-  // );
-  .post(upload.single("listing[image]"), async (req, res) => {
-    console.log("FILE: ", req.file);
-
-    console.log("Cloudinary URL:", req.file.path);
-
-    res.send(req.file);
-  });
+  .post(
+    isLoggedIn,
+    upload.single("listing[image]"),
+    validateListing,
+    wrapAsync(listingController.createListing)
+  );
 
 //New Route
 router.get("/new", isLoggedIn, listingController.renderNewForm);
