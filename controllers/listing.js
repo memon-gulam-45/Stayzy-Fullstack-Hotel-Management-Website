@@ -1,4 +1,23 @@
 const Listing = require("../models/listing");
+const fetch = require("node-fetch");
+require("dotenv").config();
+
+async function forwardGeocode(query) {
+  const url = `https://us1.locationiq.com/v1/search.php?key=${process.env.LIQ_KEY}&q=${query}&format=json&limit=1`;
+  const res = await fetch(url);
+  const data = await res.json();
+
+  console.log("Raw data:", data);
+
+  if (!Array.isArray(data) || data.length === 0) {
+    console.log("No valid data returned");
+    return { coordinates: [0, 0] };
+  }
+
+  return {
+    coordinates: [data[0].lon, data[0].lat],
+  };
+}
 
 module.exports.index = async (req, res) => {
   const allListings = await Listing.find({});
@@ -27,6 +46,11 @@ module.exports.showListing = async (req, res) => {
 };
 
 module.exports.createListing = async (req, res, next) => {
+  const geoData = await forwardGeocode(req.body.listing.location);
+  const coordinates = geoData.coordinates;
+  console.log(coordinates);
+  res.send("Done");
+
   let url = req.file.url;
   let filename = req.file.display_name;
 
