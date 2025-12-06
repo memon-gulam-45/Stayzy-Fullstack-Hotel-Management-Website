@@ -1,6 +1,6 @@
-coordinates.reverse();
+listing.geometry.coordinates.reverse();
 
-const map = L.map("map").setView(coordinates, 13);
+const map = L.map("map").setView(listing.geometry.coordinates, 13);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -13,6 +13,7 @@ let customIcon = L.icon({
   popupAnchor: [0, -32],
 });
 
-L.marker(coordinates, { icon: customIcon }).addTo(map);
-
-console.log(coordinates);
+L.marker(listing.geometry.coordinates, { icon: customIcon })
+  .addTo(map)
+  .bindPopup(`<b>${listing.location}</b>`)
+  .openPopup();
