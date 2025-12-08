@@ -47,7 +47,7 @@ console.log(MongoStore);
 
 const store = MongoStore.default.create({
   mongoUrl: dbUrl,
-  crypto: { secret: "mysuprtsecretcode" },
+  crypto: { secret: process.env.SECRET },
   touchAfter: 24 * 3600,
 });
 
@@ -57,7 +57,7 @@ store.on("error", () => {
 
 const sessionOptions = {
   store,
-  secret: "mysuprtsecretcode",
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
