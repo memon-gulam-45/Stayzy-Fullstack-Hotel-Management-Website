@@ -1,63 +1,23 @@
-<style>
-  footer {
-    background: #f8f8f8;
-    padding: 1.5rem 0;
-    border-top: 1px solid #ddd;
-  }
+<footer class="bg-light border-top py-3 mt-4">
+  <div class="container">
+    <div
+      class="d-flex justify-content-between align-items-center flex-wrap gap-3 text-center"
+    >
+      <!-- Social Icons -->
+      <div>
+        <i class="fa-brands fa-square-facebook fs-3 mx-2"></i>
+        <i class="fa-brands fa-square-instagram fs-3 mx-2"></i>
+        <i class="fa-brands fa-square-linkedin fs-3 mx-2"></i>
+      </div>
 
-  .f-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    text-align: center;
-  }
+      <!-- Brand -->
+      <div class="fw-semibold">&copy; Stayzy Private Limited</div>
 
-  .f-info-socials i {
-    font-size: 1.5rem;
-    margin: 0 0.4rem;
-    cursor: pointer;
-  }
-
-  .f-info-links a {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .f-info-links a:hover {
-    text-decoration: underline;
-  }
-
-  /* Mobile view */
-  @media (max-width: 600px) {
-    .f-info {
-      flex-direction: column; /* Stack vertically */
-      gap: 0.5rem;
-    }
-
-    .f-info-socials i {
-      font-size: 1.4rem;
-    }
-
-    .f-info-brand {
-      font-size: 0.9rem;
-    }
-  }
-</style>
-
-<footer>
-  <div class="f-info">
-    <div class="f-info-socials">
-      <i class="fa-brands fa-square-facebook"></i>
-      <i class="fa-brands fa-square-instagram"></i>
-      <i class="fa-brands fa-square-linkedin"></i>
-    </div>
-    <div class="f-info-brand">&copy; Stayzy Private Limited</div>
-    <div class="f-info-links">
-      <a href="/privacy">Privacy</a>
-      <a href="/terms">Terms</a>
+      <!-- Links -->
+      <div class="d-flex gap-3">
+        <a href="/privacy" class="text-decoration-none text-dark">Privacy</a>
+        <a href="/terms" class="text-decoration-none text-dark">Terms</a>
+      </div>
     </div>
   </div>
 </footer>
