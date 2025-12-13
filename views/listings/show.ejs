@@ -36,9 +36,11 @@
   <!-- Edit/Delete Buttons (Only for owner) -->
   <% if(currUser && listing.owner._id.equals(currUser._id)){ %>
   <div class="d-flex flex-wrap gap-2 mb-4">
-    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark">Edit</a>
+    <a href="/listings/<%= listing._id %>/edit" id="btn" class="btn py-2 px-3"
+      >Edit</a
+    >
     <form method="post" action="/listings/<%= listing.id %>?_method=DELETE">
-      <button class="btn btn-dark">Delete</button>
+      <button id="btn" class="btn py-2 px-3">Delete</button>
     </form>
   </div>
   <% } %>
@@ -94,7 +96,7 @@
         <div class="invalid-feedback">Please add some comments for review</div>
       </div>
 
-      <button class="btn btn-outline-dark">Submit</button>
+      <button class="btn py-2 px-3" id="rev-btn">Submit</button>
     </form>
     <hr />
   </div>
