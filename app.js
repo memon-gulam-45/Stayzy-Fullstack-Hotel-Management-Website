@@ -43,8 +43,6 @@ app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
-console.log(MongoStore);
-
 const store = MongoStore.default.create({
   mongoUrl: dbUrl,
   crypto: { secret: process.env.SECRET },
@@ -67,15 +65,12 @@ const sessionOptions = {
   },
 };
 
-// app.get("/", (req, res) => {
-//   res.send("Working...");
-// });
-
 app.use(session(sessionOptions));
 app.use(flash());
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()));
 
 passport.serializeUser(User.serializeUser());
@@ -97,6 +92,10 @@ app.use((req, res, next) => {
 //   let registeredUser = await User.register(fakeUser, "fakeghm@123");
 //   res.send(registeredUser);
 // });
+
+app.get("/", (req, res) => {
+  res.render("listings/home.ejs");
+});
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/review", reviewRouter);
