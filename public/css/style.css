@@ -30,18 +30,18 @@ body {
 #rev-btn {
   background-color: #fff;
   color: #2a7f7f;
-  border: 1px solid #2a7f7f;
+  border: 2px solid #2a7f7f;
   transition: background-color 0.25s ease, color 0.25s ease,
     transform 0.15s ease, box-shadow 0.15s ease;
 }
 #rev-btn:hover {
   background-color: #2a7f7f;
   color: #fff;
-  transform: scale(1.03);
+  transform: scale(1.03) !important;
   box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.12);
 }
 #rev-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.98) !important;
   box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 

@@ -11,6 +11,9 @@
     .navbar-nav .nav-link {
       padding: 0.5rem 1rem;
     }
+    .search-inp {
+      border-color: #2a7f7f;
+    }
   }
 </style>
 
@@ -59,15 +62,16 @@
       <!-- Center: Search -->
       <form class="d-flex my-2 my-md-0 mx-md-3 flex-fill" role="search">
         <input
-          class="form-control me-2 rounded-pill"
+          class="form-control me-2 px-4 border-1 search-inp rounded-pill"
           type="search"
           placeholder="Search destinations"
         />
         <button
-          class="btn btn-danger rounded-pill px-3 d-flex align-items-center"
+          id="rev-btn"
+          class="btn rounded-pill px-3 d-flex align-items-center"
           type="submit"
         >
-          <i class="fa-solid fa-magnifying-glass me-2"></i> Search
+          <i class="fa-solid fa-magnifying-glass me-2"></i> <b>Search</b>
         </button>
       </form>
 
