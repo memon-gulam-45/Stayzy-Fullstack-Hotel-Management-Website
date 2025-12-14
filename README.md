@@ -5,7 +5,7 @@ The application includes user authentication, image uploads, interactive maps, a
 
 ---
 
-Live Demo
+<h2>Live Demo</h2>
 
 <p>
   🔗 Deployed on Render <br>
