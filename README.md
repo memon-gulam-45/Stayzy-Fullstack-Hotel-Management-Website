@@ -9,7 +9,7 @@ The application includes user authentication, image uploads, interactive maps, a
 
 <p>
   🔗 Deployed on Render <br>
-  👉 <a href="https://stayzy-fullstack-hotel-listing-website.onrender.com" target="_blank" rel="noopener noreferrer">
+  👉 <a href="https://stayzy-fullstack-hotel-listing-website.onrender.com" target="_blank">
     Click Here
   </a>
 </p>
