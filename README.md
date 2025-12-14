@@ -5,7 +5,7 @@ The application includes user authentication, image uploads, interactive maps, a
 
 ---
 
-Live Demo
+## ⚙️ Live Demo
 
 🔗 Deployed on Render <br>
 👉 [Click Here](https://stayzy-fullstack-hotel-listing-website.onrender.com)
