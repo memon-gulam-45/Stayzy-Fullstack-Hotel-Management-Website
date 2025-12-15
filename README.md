@@ -162,10 +162,4 @@ Full Stack Web Developer
 
 ---
 
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
----
-
 ⭐ If you like this project, consider giving it a star on GitHub!
