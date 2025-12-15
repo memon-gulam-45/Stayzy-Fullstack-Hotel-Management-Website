@@ -156,9 +156,9 @@ SECRET=
 
 ## 👤 Author
 
-**Ashrafi**
-Diploma in Information Technology
-Full Stack Web Developer
+**Gulam Mohyudin Memon** <br>
+Diploma in Information Technology <br>
+_Full Stack Web Developer_
 
 ---
 
