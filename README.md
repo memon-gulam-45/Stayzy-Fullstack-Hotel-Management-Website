@@ -63,16 +63,16 @@ Stayzy has been tested using **Google Lighthouse** and meets modern web performa
 
 | Category         | Score    |
 | ---------------- | -------- |
-| Performance      |       92 |
-| Accessibility    |       83 |
-| Best Practices   |      100 |
-| SEO              |       90 |
+| Performance      | 92       |
+| Accessibility    | 83       |
+| Best Practices   | 100      |
+| SEO              | 90       |
 
 - Optimized for fast loading and smooth interactions
 - Follows modern web and PWA best practices
 - Accessible and SEO-friendly
 - Installable as a Progressive Web App (PWA)
-<br><br>
+<br>
 > These scores reflect desktop testing. Mobile scores may vary slightly.
 
 ---
